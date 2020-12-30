@@ -121,8 +121,50 @@ struct ContentView: View {
                     .font(.title2)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.leading)
-                    .offset(x: 20)
                     .padding(.top, 40.0)
+                    .offset(x: 20)
+                
+                HStack {
+                    Image("person.crop.circle")
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .padding(.horizontal, 15)
+                    Image("person.crop.circle")
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .padding(.trailing, 15)
+                    Image("person.crop.circle")
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .padding(.trailing, 15)
+                    Image("person.crop.circle")
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .padding(.trailing, 15)
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(.top, 30)
+                
+                HStack {
+                    Image("person.crop.circle")
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .padding(.horizontal, 15)
+                    Image("person.crop.circle")
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .padding(.trailing, 15)
+                    Image("person.crop.circle")
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .padding(.trailing, 15)
+                    Image("person.crop.circle")
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .padding(.trailing, 15)
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(.top, 30)
                 
             // end of VStack
             }.frame(minWidth: 0, idealWidth: 100, maxWidth: .infinity, minHeight: 0, idealHeight: 100, maxHeight: .infinity, alignment: .topLeading)
@@ -144,10 +186,10 @@ struct CardView: View {
         ZStack{
             Rectangle()
                 .fill(LinearGradient(gradient: Gradient(colors: [.purple,.pink]), startPoint: .leading, endPoint: .trailing))
-                .frame(width: 160, height:200, alignment: .center)
+                .frame(width: 230, height:250, alignment: .center)
                 .cornerRadius(20)
             VStack(){
-                Image("\(imageName)").resizable().frame(width: 160, height: 200, alignment: .top).cornerRadius(20)
+                Image("\(imageName)").resizable().frame(width: 230, height: 250, alignment: .top).cornerRadius(20)
             }
         }
     }

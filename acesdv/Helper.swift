@@ -8,7 +8,7 @@
 import Foundation
 
 class Helper {
-    func ScrollViewFills(selection: String) {
+    class func ScrollViewFills(selection: String) {
         print("Helper function")
     }
 }

@@ -16,6 +16,7 @@
 		79639611259BD6A900593863 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7963960F259BD6A900593863 /* LaunchScreen.storyboard */; };
 		7963961C259BD6A900593863 /* acesdvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963961B259BD6A900593863 /* acesdvTests.swift */; };
 		79639627259BD6A900593863 /* acesdvUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639626259BD6A900593863 /* acesdvUITests.swift */; };
+		79EA631A259BFDED003607A9 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EA6319259BFDED003607A9 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		796395FE259BD6A700593863 /* acesdv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = acesdv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79639601259BD6A700593863 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79639603259BD6A700593863 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		79639605259BD6A700593863 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		79639605259BD6A700593863 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 7; };
 		79639608259BD6A700593863 /* acesdv.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = acesdv.xcdatamodel; sourceTree = "<group>"; };
 		7963960A259BD6A900593863 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7963960D259BD6A900593863 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		79639622259BD6A900593863 /* acesdvUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = acesdvUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79639626259BD6A900593863 /* acesdvUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acesdvUITests.swift; sourceTree = "<group>"; };
 		79639628259BD6A900593863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79EA6319259BFDED003607A9 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				79639601259BD6A700593863 /* AppDelegate.swift */,
 				79639603259BD6A700593863 /* SceneDelegate.swift */,
 				79639605259BD6A700593863 /* ContentView.swift */,
+				79EA6319259BFDED003607A9 /* Helper.swift */,
 				7963960A259BD6A900593863 /* Assets.xcassets */,
 				7963960F259BD6A900593863 /* LaunchScreen.storyboard */,
 				79639612259BD6A900593863 /* Info.plist */,
@@ -271,6 +274,7 @@
 			files = (
 				79639602259BD6A700593863 /* AppDelegate.swift in Sources */,
 				79639609259BD6A700593863 /* acesdv.xcdatamodeld in Sources */,
+				79EA631A259BFDED003607A9 /* Helper.swift in Sources */,
 				79639604259BD6A700593863 /* SceneDelegate.swift in Sources */,
 				79639606259BD6A700593863 /* ContentView.swift in Sources */,
 			);

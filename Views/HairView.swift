@@ -15,6 +15,11 @@ struct HairView: View {
     @State var popularTapped: Bool = false
     @State var newTapped: Bool = false
     
+    let recommendedImages: [String]
+    let trendingImages : [String]
+    let popularImages: [String]
+    let newImages: [String]
+    
     var body: some View {
         ZStack {
             VStack(alignment: .leading) {
@@ -22,7 +27,7 @@ struct HairView: View {
                 
                 HairViewCategoryButtons(selection: $selection, trendingTapped: $trendingTapped, recommendedTapped: $recommendedTapped, popularTapped: $popularTapped, newTapped: $newTapped)
                 
-                HairViewScrollView(selection: $selection)
+                HairViewScrollView(selection: $selection, recommendedImages: recommendedImages, trendingImages: trendingImages, popularImages: popularImages, newImages: newImages)
                 
                 Text("Categories")
                     .font(.title2)
@@ -33,7 +38,6 @@ struct HairView: View {
                 
                 HairViewIconGroup()
                 
-            // end of VStack
             }.frame(minWidth: 0, idealWidth: 100, maxWidth: .infinity, minHeight: 0, idealHeight: 100, maxHeight: .infinity, alignment: .topLeading)
             
             HairViewProfileIcon()
@@ -137,40 +141,31 @@ struct HairViewCategoryButtons: View {
 
 struct HairViewScrollView: View {
     @Binding var selection: String
+    let recommendedImages: [String]
+    let trendingImages : [String]
+    let popularImages: [String]
+    let newImages: [String]
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack {
                 switch selection {
                 case "Recommended":
-                    CardView(imageName: "RecommendedTesting")
-                        .padding(.trailing, 5)
-                    CardView(imageName: "RecommendedTesting")
-                        .padding(.trailing, 5)
-                    CardView(imageName: "RecommendedTesting")
-                        .padding(.trailing, 5)
+                    ForEach(0..<recommendedImages.count) {
+                        CardView(imageName: self.recommendedImages[$0]).padding(.trailing, 5)
+                    }
                 case "Popular":
-                    CardView(imageName: "PopularTesting")
-                        .padding(.trailing, 5)
-                    CardView(imageName: "PopularTesting")
-                        .padding(.trailing, 5)
-                    CardView(imageName: "PopularTesting")
-                        .padding(.trailing, 5)
+                    ForEach(0..<popularImages.count) {
+                        CardView(imageName: self.popularImages[$0]).padding(.trailing, 5)
+                    }
                 case "New":
-                    CardView(imageName: "NewTesting")
-                        .padding(.trailing, 5)
-                    CardView(imageName: "NewTesting")
-                        .padding(.trailing, 5)
-                    CardView(imageName: "NewTesting")
-                        .padding(.trailing, 5)
+                    ForEach(0..<newImages.count) {
+                        CardView(imageName: self.newImages[$0]).padding(.trailing, 5)
+                    }
                 default:
-                    CardView(imageName: "TestImage")
-                        .padding(.trailing, 5)
-                    CardView(imageName: "TestImage")
-                        .padding(.trailing, 5)
-                    CardView(imageName: "TestImage")
-                        .padding(.trailing, 5)
-                    CardView(imageName: "TestImage")
-                        .padding(.trailing, 5)
+                    ForEach(0..<trendingImages.count) {
+                        CardView(imageName: self.trendingImages[$0]).padding(.trailing, 5)
+                    }
                 }
             }
         }

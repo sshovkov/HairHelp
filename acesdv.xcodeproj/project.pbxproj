@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		790E920C26051F1A005A1341 /* HairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E920B26051F1A005A1341 /* HairView.swift */; };
+		7953F34C260531800089A86F /* PasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F34B260531800089A86F /* PasswordScreen.swift */; };
+		7953F351260531920089A86F /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F350260531920089A86F /* PasswordView.swift */; };
 		79639602259BD6A700593863 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639601259BD6A700593863 /* AppDelegate.swift */; };
 		79639604259BD6A700593863 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639603259BD6A700593863 /* SceneDelegate.swift */; };
 		79639606259BD6A700593863 /* HairScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639605259BD6A700593863 /* HairScreen.swift */; };
@@ -17,7 +19,6 @@
 		79639611259BD6A900593863 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7963960F259BD6A900593863 /* LaunchScreen.storyboard */; };
 		7963961C259BD6A900593863 /* acesdvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963961B259BD6A900593863 /* acesdvTests.swift */; };
 		79639627259BD6A900593863 /* acesdvUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639626259BD6A900593863 /* acesdvUITests.swift */; };
-		79EA631A259BFDED003607A9 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EA6319259BFDED003607A9 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		790E920B26051F1A005A1341 /* HairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairView.swift; sourceTree = "<group>"; };
+		7953F34B260531800089A86F /* PasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordScreen.swift; sourceTree = "<group>"; };
+		7953F350260531920089A86F /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		796395FE259BD6A700593863 /* acesdv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = acesdv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79639601259BD6A700593863 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79639603259BD6A700593863 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		79639622259BD6A900593863 /* acesdvUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = acesdvUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79639626259BD6A900593863 /* acesdvUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acesdvUITests.swift; sourceTree = "<group>"; };
 		79639628259BD6A900593863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79EA6319259BFDED003607A9 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				79639605259BD6A700593863 /* HairScreen.swift */,
+				7953F34B260531800089A86F /* PasswordScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -94,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				790E920B26051F1A005A1341 /* HairView.swift */,
+				7953F350260531920089A86F /* PasswordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,7 +129,6 @@
 			children = (
 				79639601259BD6A700593863 /* AppDelegate.swift */,
 				79639603259BD6A700593863 /* SceneDelegate.swift */,
-				79EA6319259BFDED003607A9 /* Helper.swift */,
 				7963960A259BD6A900593863 /* Assets.xcassets */,
 				7963960F259BD6A900593863 /* LaunchScreen.storyboard */,
 				79639612259BD6A900593863 /* Info.plist */,
@@ -291,10 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7953F34C260531800089A86F /* PasswordScreen.swift in Sources */,
+				7953F351260531920089A86F /* PasswordView.swift in Sources */,
 				790E920C26051F1A005A1341 /* HairView.swift in Sources */,
 				79639602259BD6A700593863 /* AppDelegate.swift in Sources */,
 				79639609259BD6A700593863 /* acesdv.xcdatamodeld in Sources */,
-				79EA631A259BFDED003607A9 /* Helper.swift in Sources */,
 				79639604259BD6A700593863 /* SceneDelegate.swift in Sources */,
 				79639606259BD6A700593863 /* HairScreen.swift in Sources */,
 			);

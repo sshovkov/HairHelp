@@ -10,9 +10,14 @@ import SwiftUI
 
 struct HairScreen: View {
     
+    let trendingImages = ["TestImage", "TestImage", "TestImage", "TestImage"]
+    let recommendedImages = ["RecommendedTesting", "RecommendedTesting", "RecommendedTesting", "RecommendedTesting", "RecommendedTesting"]
+    let popularImages = ["PopularTesting", "PopularTesting", "PopularTesting"]
+    let newImages = ["NewTesting", "NewTesting", "NewTesting", "NewTesting"]
+    
     
     var body: some View {
-        HairView()
+        HairView(recommendedImages: recommendedImages, trendingImages: trendingImages, popularImages: popularImages, newImages: newImages)
     }
 }
 

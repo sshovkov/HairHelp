@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		790E920C26051F1A005A1341 /* HairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E920B26051F1A005A1341 /* HairView.swift */; };
 		79639602259BD6A700593863 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639601259BD6A700593863 /* AppDelegate.swift */; };
 		79639604259BD6A700593863 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639603259BD6A700593863 /* SceneDelegate.swift */; };
-		79639606259BD6A700593863 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639605259BD6A700593863 /* ContentView.swift */; };
+		79639606259BD6A700593863 /* HairScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639605259BD6A700593863 /* HairScreen.swift */; };
 		79639609259BD6A700593863 /* acesdv.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79639607259BD6A700593863 /* acesdv.xcdatamodeld */; };
 		7963960B259BD6A900593863 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7963960A259BD6A900593863 /* Assets.xcassets */; };
 		7963960E259BD6A900593863 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7963960D259BD6A900593863 /* Preview Assets.xcassets */; };
@@ -37,10 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		790E920B26051F1A005A1341 /* HairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairView.swift; sourceTree = "<group>"; };
 		796395FE259BD6A700593863 /* acesdv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = acesdv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79639601259BD6A700593863 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79639603259BD6A700593863 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		79639605259BD6A700593863 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 7; };
+		79639605259BD6A700593863 /* HairScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairScreen.swift; sourceTree = "<group>"; tabWidth = 7; };
 		79639608259BD6A700593863 /* acesdv.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = acesdv.xcdatamodel; sourceTree = "<group>"; };
 		7963960A259BD6A900593863 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7963960D259BD6A900593863 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -80,9 +82,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		790E920926051EF7005A1341 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				79639605259BD6A700593863 /* HairScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		790E920A26051F04005A1341 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				790E920B26051F1A005A1341 /* HairView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		796395F5259BD6A700593863 = {
 			isa = PBXGroup;
 			children = (
+				790E920A26051F04005A1341 /* Views */,
+				790E920926051EF7005A1341 /* Screens */,
 				79639600259BD6A700593863 /* acesdv */,
 				7963961A259BD6A900593863 /* acesdvTests */,
 				79639625259BD6A900593863 /* acesdvUITests */,
@@ -105,7 +125,6 @@
 			children = (
 				79639601259BD6A700593863 /* AppDelegate.swift */,
 				79639603259BD6A700593863 /* SceneDelegate.swift */,
-				79639605259BD6A700593863 /* ContentView.swift */,
 				79EA6319259BFDED003607A9 /* Helper.swift */,
 				7963960A259BD6A900593863 /* Assets.xcassets */,
 				7963960F259BD6A900593863 /* LaunchScreen.storyboard */,
@@ -272,11 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				790E920C26051F1A005A1341 /* HairView.swift in Sources */,
 				79639602259BD6A700593863 /* AppDelegate.swift in Sources */,
 				79639609259BD6A700593863 /* acesdv.xcdatamodeld in Sources */,
 				79EA631A259BFDED003607A9 /* Helper.swift in Sources */,
 				79639604259BD6A700593863 /* SceneDelegate.swift in Sources */,
-				79639606259BD6A700593863 /* ContentView.swift in Sources */,
+				79639606259BD6A700593863 /* HairScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

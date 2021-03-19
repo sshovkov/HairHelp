@@ -10,6 +10,8 @@
 		790E920C26051F1A005A1341 /* HairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E920B26051F1A005A1341 /* HairView.swift */; };
 		7953F34C260531800089A86F /* PasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F34B260531800089A86F /* PasswordScreen.swift */; };
 		7953F351260531920089A86F /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F350260531920089A86F /* PasswordView.swift */; };
+		7953F3562605502E0089A86F /* SafetyPlanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F3552605502E0089A86F /* SafetyPlanScreen.swift */; };
+		7953F35B2605503B0089A86F /* SafetyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F35A2605503B0089A86F /* SafetyPlanView.swift */; };
 		79639602259BD6A700593863 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639601259BD6A700593863 /* AppDelegate.swift */; };
 		79639604259BD6A700593863 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639603259BD6A700593863 /* SceneDelegate.swift */; };
 		79639606259BD6A700593863 /* HairScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639605259BD6A700593863 /* HairScreen.swift */; };
@@ -42,6 +44,8 @@
 		790E920B26051F1A005A1341 /* HairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairView.swift; sourceTree = "<group>"; };
 		7953F34B260531800089A86F /* PasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordScreen.swift; sourceTree = "<group>"; };
 		7953F350260531920089A86F /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
+		7953F3552605502E0089A86F /* SafetyPlanScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyPlanScreen.swift; sourceTree = "<group>"; };
+		7953F35A2605503B0089A86F /* SafetyPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyPlanView.swift; sourceTree = "<group>"; };
 		796395FE259BD6A700593863 /* acesdv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = acesdv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79639601259BD6A700593863 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79639603259BD6A700593863 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			children = (
 				79639605259BD6A700593863 /* HairScreen.swift */,
 				7953F34B260531800089A86F /* PasswordScreen.swift */,
+				7953F3552605502E0089A86F /* SafetyPlanScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 			children = (
 				790E920B26051F1A005A1341 /* HairView.swift */,
 				7953F350260531920089A86F /* PasswordView.swift */,
+				7953F35A2605503B0089A86F /* SafetyPlanView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,7 +300,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7953F3562605502E0089A86F /* SafetyPlanScreen.swift in Sources */,
 				7953F34C260531800089A86F /* PasswordScreen.swift in Sources */,
+				7953F35B2605503B0089A86F /* SafetyPlanView.swift in Sources */,
 				7953F351260531920089A86F /* PasswordView.swift in Sources */,
 				790E920C26051F1A005A1341 /* HairView.swift in Sources */,
 				79639602259BD6A700593863 /* AppDelegate.swift in Sources */,

@@ -214,10 +214,17 @@ struct HairViewIconGroup: View {
 struct HairViewProfileIcon: View {
     var body: some View {
         HStack{
-            Image("person.crop.circle")
-                .resizable()
-                .frame(width: 70, height: 70)
-                .offset(x: -20, y: 5)
+            Button(action: {
+                print("pressed")
+            }, label: {
+                Image("person.crop.circle")
+                    .renderingMode(.original)
+            })
+            .offset(x: -20, y: 5)
+//            Image("person.crop.circle")
+//                .resizable()
+//                .frame(width: 70, height: 70)
+//                .offset(x: -20, y: 5)
         }
         .frame(minWidth: 0, idealWidth: 100, maxWidth: .infinity, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .topTrailing)
     }

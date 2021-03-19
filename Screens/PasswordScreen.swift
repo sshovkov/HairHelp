@@ -4,11 +4,11 @@
 //
 //  Created by Shovkovy on 3/19/21.
 //
-
+import Foundation
 import SwiftUI
 
 struct PasswordScreen: View {
-    @State private var password = "0000"
+    @State var password = ["2", "5", "6", "9"]
     
     var body: some View {
         PasswordView()

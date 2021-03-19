@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PasswordView: View {
+    
     var body: some View {
         ZStack{
             Image("Password_Background")

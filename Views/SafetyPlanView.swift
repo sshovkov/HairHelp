@@ -61,6 +61,7 @@ struct SafetyDropDowns: View {
             }, label: {
                 HStack {
                     Text("Physical Safety")
+                        .padding(.trailing, 160)
                     Image("RightChevron")
                 }
             })
@@ -75,6 +76,7 @@ struct SafetyDropDowns: View {
             }, label: {
                 HStack {
                     Text("Emotional Safety")
+                        .padding(.trailing, 155)
                     Image("RightChevron")
                 }
             })
@@ -89,6 +91,7 @@ struct SafetyDropDowns: View {
             }, label: {
                 HStack {
                     Text("Legal Safety")
+                        .padding(.trailing, 185)
                     Image("RightChevron")
                 }
             })
@@ -103,6 +106,7 @@ struct SafetyDropDowns: View {
             }, label: {
                 HStack {
                     Text("Leaving a Relationship")
+                        .padding(.trailing, 115)
                     Image("RightChevron")
                 }
             })
@@ -117,6 +121,7 @@ struct SafetyDropDowns: View {
             }, label: {
                 HStack {
                     Text("My Documents")
+                        .padding(.trailing, 165)
                     Image("RightChevron")
                 }
             })

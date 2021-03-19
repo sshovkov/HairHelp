@@ -12,9 +12,12 @@ struct SafetyPlanView: View {
         ZStack {
             VStack(alignment: .center) {
                 SafetyChatBanner()
+                    .offset(y: -14)
                 SafetyCategories()
                 SafetyDropDowns()
+                Spacer()
                 SafetyQuickExit()
+                    .offset(y: 35)
             }
         }
     }
@@ -43,13 +46,14 @@ struct SafetyCategories: View {
     var body: some View {
         HStack {
             Text("My Safety Plan")
-                .padding(.trailing, 60)
+                .padding(.horizontal)
+                .font(.title)
             Text("Resources")
-                .padding(.trailing, 20)
+                .font(.title)
             Image("QuestionIcon")
                 .frame(width:38, height: 38)
         }
-        .padding(.top, 40)
+        .padding(.top, 30)
     }
 }
 
@@ -158,7 +162,6 @@ struct SafetyQuickExit: View {
             .background(Color("Lavender").opacity(0.35))
             .foregroundColor(Color("DarkPurple"))
         }
-        .offset(y: 50)
     }
 }
 

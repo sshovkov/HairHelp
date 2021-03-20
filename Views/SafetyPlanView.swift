@@ -9,17 +9,20 @@ import SwiftUI
 
 struct SafetyPlanView: View {
     var body: some View {
-        ZStack {
-            VStack(alignment: .center) {
-                SafetyChatBanner()
-                    .offset(y: -14)
-                SafetyCategories()
-                SafetyDropDowns()
-                Spacer()
-                SafetyQuickExit()
-                    .offset(y: 35)
+        NavigationView {
+            ZStack {
+                VStack(alignment: .center) {
+                    SafetyChatBanner()
+                        .offset(y: -14)
+                    SafetyCategories()
+                    SafetyDropDowns()
+                    Spacer()
+                    SafetyQuickExit()
+                        .offset(y: 35)
+                }
             }
         }
+        
     }
 }
 
@@ -48,13 +51,21 @@ struct SafetyCategories: View {
             Text("My Safety Plan")
                 .padding(.horizontal)
                 .font(.title)
-            Text("Resources")
-                .font(.title)
-            Image("QuestionIcon")
-                .frame(width:38, height: 38)
+            NavigationLink(
+                destination: MoreInfoScreen(),
+                label: {
+                    Image("QuestionIcon")
+                        .frame(width:38, height: 38)
+                        .padding(.horizontal, 10)
+                        .navigationBarHidden(true)
+                })
         }
         .padding(.top, 30)
     }
+    
+//    Image("QuestionIcon")
+//        .frame(width:38, height: 38)
+//        .padding(.horizontal, 10)
 }
 
 struct SafetyDropDowns: View {

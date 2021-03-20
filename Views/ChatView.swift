@@ -59,7 +59,7 @@ struct ChatSendMessage: View {
                 .frame(width: 29, height: 26)
             Image("AttachIcon")
                 .frame(width: 15, height: 30)
-                .padding(.horizontal, 10)
+                .padding(.trailing, 10)
             Image("SendIcon")
                 .frame(width: 20, height: 26)
                 .padding(.leading, 13)

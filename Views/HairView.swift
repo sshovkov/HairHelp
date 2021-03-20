@@ -52,7 +52,7 @@ struct CardView: View {
     var body: some View {
         ZStack{
             Rectangle()
-                .fill(LinearGradient(gradient: Gradient(colors: [.purple,.pink]), startPoint: .leading, endPoint: .trailing))
+                .fill(LinearGradient(gradient: Gradient(colors: [Color("Lavender"),Color("Mauve")]), startPoint: .leading, endPoint: .trailing))
                 .frame(width: 230, height:250, alignment: .center)
                 .cornerRadius(20)
             VStack(){
@@ -186,28 +186,41 @@ struct PersonIcon: View {
 struct HairViewIconGroup: View {
     var body: some View {
         HStack {
-            Image("person.crop.circle")
-                .resizable()
-                .frame(width: 80, height: 80)
-                .padding(.horizontal, 15)
-            PersonIcon()
-            PersonIcon()
-            PersonIcon()
+            HairIconTemplate(name: "Haircut")
+            Spacer()
+            HairIconTemplate(name: "Coloring")
+            Spacer()
+            HairIconTemplate(name: "Treatments")
+            Spacer()
+            HairIconTemplate(name: "Styling")
         }
         .frame(maxWidth: .infinity, alignment: .center)
-        .padding(.top, 30)
+        .padding(20)
         
         HStack {
-            Image("person.crop.circle")
-                .resizable()
-                .frame(width: 80, height: 80)
-                .padding(.horizontal, 15)
-            PersonIcon()
-            PersonIcon()
-            PersonIcon()
+            HairIconTemplate(name: "Shaving")
+            Spacer()
+            HairIconTemplate(name: "Shampoo")
+            Spacer()
+            HairIconTemplate(name: "Classes")
+            Spacer()
+            HairIconTemplate(name: "More")
         }
         .frame(maxWidth: .infinity, alignment: .center)
-        .padding(.top, 30)
+        .padding(20)
+    }
+}
+
+struct HairIconTemplate: View {
+    let name: String
+    var body: some View {
+        VStack {
+            Circle()
+                .fill(Color("Lavender"))
+                .frame(width: 70, height: 70)
+            Text(name)
+                .opacity(0.5)
+        }
     }
 }
 
@@ -221,10 +234,6 @@ struct HairViewProfileIcon: View {
                     .renderingMode(.original)
             })
             .offset(x: -20, y: 5)
-//            Image("person.crop.circle")
-//                .resizable()
-//                .frame(width: 70, height: 70)
-//                .offset(x: -20, y: 5)
         }
         .frame(minWidth: 0, idealWidth: 100, maxWidth: .infinity, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .topTrailing)
     }

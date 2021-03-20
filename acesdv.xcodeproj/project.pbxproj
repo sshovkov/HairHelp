@@ -14,6 +14,8 @@
 		7953F35B2605503B0089A86F /* SafetyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F35A2605503B0089A86F /* SafetyPlanView.swift */; };
 		7953F360260561300089A86F /* MoreInfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F35F260561300089A86F /* MoreInfoScreen.swift */; };
 		7953F3652605615C0089A86F /* MoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F3642605615C0089A86F /* MoreInfoView.swift */; };
+		7953F36A260564500089A86F /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F369260564500089A86F /* ChatScreen.swift */; };
+		7953F36F2605645B0089A86F /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F36E2605645B0089A86F /* ChatView.swift */; };
 		79639602259BD6A700593863 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639601259BD6A700593863 /* AppDelegate.swift */; };
 		79639604259BD6A700593863 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639603259BD6A700593863 /* SceneDelegate.swift */; };
 		79639606259BD6A700593863 /* HairScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639605259BD6A700593863 /* HairScreen.swift */; };
@@ -50,6 +52,8 @@
 		7953F35A2605503B0089A86F /* SafetyPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyPlanView.swift; sourceTree = "<group>"; };
 		7953F35F260561300089A86F /* MoreInfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoScreen.swift; sourceTree = "<group>"; };
 		7953F3642605615C0089A86F /* MoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoView.swift; sourceTree = "<group>"; };
+		7953F369260564500089A86F /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
+		7953F36E2605645B0089A86F /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		796395FE259BD6A700593863 /* acesdv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = acesdv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79639601259BD6A700593863 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79639603259BD6A700593863 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				7953F34B260531800089A86F /* PasswordScreen.swift */,
 				7953F3552605502E0089A86F /* SafetyPlanScreen.swift */,
 				7953F35F260561300089A86F /* MoreInfoScreen.swift */,
+				7953F369260564500089A86F /* ChatScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 				7953F350260531920089A86F /* PasswordView.swift */,
 				7953F35A2605503B0089A86F /* SafetyPlanView.swift */,
 				7953F3642605615C0089A86F /* MoreInfoView.swift */,
+				7953F36E2605645B0089A86F /* ChatView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,7 +318,9 @@
 				7953F34C260531800089A86F /* PasswordScreen.swift in Sources */,
 				7953F35B2605503B0089A86F /* SafetyPlanView.swift in Sources */,
 				7953F351260531920089A86F /* PasswordView.swift in Sources */,
+				7953F36F2605645B0089A86F /* ChatView.swift in Sources */,
 				790E920C26051F1A005A1341 /* HairView.swift in Sources */,
+				7953F36A260564500089A86F /* ChatScreen.swift in Sources */,
 				79639602259BD6A700593863 /* AppDelegate.swift in Sources */,
 				79639609259BD6A700593863 /* acesdv.xcdatamodeld in Sources */,
 				79639604259BD6A700593863 /* SceneDelegate.swift in Sources */,

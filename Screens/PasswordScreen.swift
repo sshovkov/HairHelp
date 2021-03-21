@@ -7,11 +7,11 @@
 import Foundation
 import SwiftUI
 
+var correctPassword = ["2", "5", "6", "9"]
+
 struct PasswordScreen: View {
-    @State var password = ["2", "5", "6", "9"]
-    
     var body: some View {
-        PasswordView()
+        Password()
     }
 }
 

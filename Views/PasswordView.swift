@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PasswordView: View {
+    @State private var input = [""]
     var body: some View {
         NavigationView {
             ZStack {
@@ -17,8 +18,8 @@ struct PasswordView: View {
                     .blur(radius: 3.0)
                 PasswordLockImage()
                 PasswordTitle()
-                PasswordKeyPad()
-                PasswordBottomText()
+                PasswordKeyPad(input: $input)
+                PasswordBottomText(input: $input)
             }
         }
         .navigationBarHidden(true)
@@ -62,41 +63,66 @@ struct PasswordTitle: View {
                 .foregroundColor(Color.white)
                 .font(.largeTitle)
                 .multilineTextAlignment(.center)
-            //PasswordVisualCircles()
         }
         .padding(.bottom, 430)
     }
 }
 
 struct PasswordBottomText: View {
+    @Binding var input: [String]
+    @State private var showHairView = false
     var body: some View {
+        NavigationLink(
+            destination: HairScreen(),
+            isActive: $showHairView,
+            label: {
+                EmptyView()
+            })
+        
         HStack {
             Text("Emergency")
                 .foregroundColor(.black)
                 .padding(.trailing, 50)
                 .opacity(0.5)
                 .font(.title2)
-            Text("Delete")
-                .foregroundColor(.black)
-                .padding(.leading, 50)
-                .opacity(0.5)
-                .font(.title2)
+            if input.count == 0 {
+                Button(action: {
+                    input.removeLast()
+                }, label: {
+                    Text("Delete")
+                        .foregroundColor(.black)
+                        .padding(.leading, 50)
+                        .opacity(0.5)
+                        .font(.title2)
+                })
+            } else {
+                Button(action: {
+                    showHairView = true
+                }, label: {
+                    Text("Cancel")
+                        .foregroundColor(.black)
+                        .padding(.leading, 50)
+                        .opacity(0.5)
+                        .font(.title2)
+                })
+            }
         }.padding(.top, 750)
         
     }
 }
 
-func passwordValidation(inputPassword: [String]) -> Bool {
-    let correctPassword = ["", "2", "5", "6", "9"]
-    if inputPassword.count == 5 && inputPassword == correctPassword {
-        return true
-    } else {
-        return false
-    }
-}
+//func passwordValidation(inputPassword: [String]) -> Bool {
+//    let correctPassword = ["", "2", "5", "6", "9"]
+//    if inputPassword.count == 5 && inputPassword == correctPassword {
+//        return true
+//    } else {
+//        return false
+//    }
+//}
 
 struct PasswordKeyPad: View {
-    @State private var input = [""]
+    //@State private var input = [""]
+    @Binding var input: [String]
     @State private var flag = false
     
     var body: some View {
@@ -107,8 +133,8 @@ struct PasswordKeyPad: View {
                     .navigationBarBackButtonHidden(true)
                     
                 Button(action: {
-                    self.input.append("1")
-                    self.flag = passwordValidation(inputPassword: self.input)
+                    input.append("1")
+                    self.flag = passwordValidation(inputPassword: input)
                 }, label: {
                     VStack(alignment: .center) {
                         Text("1")
@@ -122,8 +148,8 @@ struct PasswordKeyPad: View {
                 })
                 
                 Button(action: {
-                    self.input.append("2")
-                    self.flag = passwordValidation(inputPassword: self.input)
+                    input.append("2")
+                    self.flag = passwordValidation(inputPassword: input)
                 }, label: {
                     VStack(alignment: .center) {
                         Text("2")
@@ -138,8 +164,8 @@ struct PasswordKeyPad: View {
                 }).padding(.horizontal, 20)
                 
                 Button(action: {
-                    self.input.append("3")
-                    self.flag = passwordValidation(inputPassword: self.input)
+                    input.append("3")
+                    self.flag = passwordValidation(inputPassword: input)
                 }, label: {
                     VStack(alignment: .center) {
                         Text("3")
@@ -153,10 +179,11 @@ struct PasswordKeyPad: View {
                         .multilineTextAlignment(.center)
                 })
             }.padding(.vertical, 10)
+            
             HStack {
                 Button(action: {
-                    self.input.append("4")
-                    self.flag = passwordValidation(inputPassword: self.input)
+                    input.append("4")
+                    self.flag = passwordValidation(inputPassword: input)
                 }, label: {
                     VStack(alignment: .center) {
                         Text("4")
@@ -171,8 +198,8 @@ struct PasswordKeyPad: View {
                 })
                 
                 Button(action: {
-                    self.input.append("5")
-                    self.flag = passwordValidation(inputPassword: self.input)
+                    input.append("5")
+                    self.flag = passwordValidation(inputPassword: input)
                 }, label: {
                     VStack(alignment: .center) {
                         Text("5")
@@ -187,8 +214,8 @@ struct PasswordKeyPad: View {
                 }).padding(.horizontal, 20)
                 
                 Button(action: {
-                    self.input.append("6")
-                    self.flag = passwordValidation(inputPassword: self.input)
+                    input.append("6")
+                    self.flag = passwordValidation(inputPassword: input)
                 }, label: {
                     VStack(alignment: .center) {
                         Text("6")
@@ -204,8 +231,8 @@ struct PasswordKeyPad: View {
             }.padding(.vertical, 10)
             HStack {
                 Button(action: {
-                    self.input.append("7")
-                    self.flag = passwordValidation(inputPassword: self.input)
+                    input.append("7")
+                    self.flag = passwordValidation(inputPassword: input)
                 }, label: {
                     VStack(alignment: .center) {
                         Text("7")
@@ -219,8 +246,8 @@ struct PasswordKeyPad: View {
                         .multilineTextAlignment(.center)
                 })
                 Button(action: {
-                    self.input.append("8")
-                    self.flag = passwordValidation(inputPassword: self.input)
+                    input.append("8")
+                    self.flag = passwordValidation(inputPassword: input)
                 }, label: {
                     VStack(alignment: .center) {
                         Text("8")
@@ -235,8 +262,8 @@ struct PasswordKeyPad: View {
                 }).padding(.horizontal, 20)
                 
                 Button(action: {
-                    self.input.append("9")
-                    self.flag = passwordValidation(inputPassword: self.input)
+                    input.append("9")
+                    self.flag = passwordValidation(inputPassword: input)
                 }, label: {
                     VStack(alignment: .center) {
                         Text("9")
@@ -253,8 +280,8 @@ struct PasswordKeyPad: View {
             }.padding(.vertical, 10)
             HStack {
                 Button(action: {
-                    self.input.append("0")
-                    self.flag = passwordValidation(inputPassword: self.input)
+                    input.append("0")
+                    self.flag = passwordValidation(inputPassword: input)
                 }, label: {
                     VStack(alignment: .center) {
                         Text("0")

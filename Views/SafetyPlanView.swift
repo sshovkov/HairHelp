@@ -67,6 +67,16 @@ struct SafetyCategories: View {
                 })
                 .navigationBarHidden(true)
                 .navigationBarBackButtonHidden(true)
+            NavigationLink(
+                destination: PhotoLibrary(),
+                label: {
+                    Image("PhotoLibrary")
+                        .renderingMode(.original)
+                        .frame(width:38, height: 38)
+                        .padding(.horizontal, 10)
+                })
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
         }
         .padding(.top, 30)
     }
@@ -109,7 +119,7 @@ struct SafetyDropDowns: View {
                 DropDown(name: "Emotional Safety", options: emotionalSafetyOptions)
                 DropDown(name: "Legal Safety", options: legalSafetyOptions)
                 DropDown(name: "Leaving a Relationship", options: relationshipOptions)
-                DropDown(name: "My Documents", options: documentOptions)
+                DropDownDocuments()
             }
         }.padding(.top, 35)
     }
@@ -173,6 +183,7 @@ struct DropDownOptions {
     let key: String
     let val: String
 }
+
 
 struct SafetyPlanView_Preview: PreviewProvider {
     static var previews: some View {

@@ -184,7 +184,6 @@ struct DropDownOptions {
     let val: String
 }
 
-
 struct SafetyPlanView_Preview: PreviewProvider {
     static var previews: some View {
         SafetyPlanView()

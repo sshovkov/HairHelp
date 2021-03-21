@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+var list_of_images: [UIImage] = []
 
 /**
  DropDown() receives name and options as parameters.
@@ -77,7 +78,7 @@ struct DropDownDocuments: View {
                 
                 VStack(alignment: .leading, spacing: 20, content: {
                     if self.expand {
-                        InnerButton(text: "Scan a document (e.g., drivers license, birth certificate)", subtext: "")
+                        InnerScanButton()
                         InnerPhotoButton()
                     }
                 })
@@ -118,7 +119,6 @@ struct InnerButton: View {
 
 struct InnerPhotoButton: View {
     @State private var image: Image?
-    @State var list_of_images: [Image]?
     @State private  var showingImagePicker = false
     @State private var inputImage: UIImage?
     
@@ -131,7 +131,7 @@ struct InnerPhotoButton: View {
             self.checked.toggle()
         }) {
             HStack (alignment: .top) {
-                Image(checked ? "Checked" : "UploadPhoto")
+                Image("UploadPhoto")
                     .renderingMode(.original)
                     .frame(width: 36, height: 33)
                 VStack (alignment: .leading, spacing: nil, content: {
@@ -145,11 +145,6 @@ struct InnerPhotoButton: View {
                             .padding(3)
                     }
                 }).padding(.bottom, 10)
-                if image != nil {
-                    image?
-                        .resizable()
-                        .scaledToFit()
-                }
             }.padding(.horizontal)
             
         }
@@ -162,19 +157,14 @@ struct InnerPhotoButton: View {
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
-        image = Image(uiImage: inputImage)
-        
-        if let unwrapped = image {
-            list_of_images?.append(unwrapped)
-        } else {
-            print("No image")
-        }
+        list_of_images.append(inputImage)
     }
 }
 
 struct InnerScanButton: View {
     @State private var image: Image?
-    @State private  var showingImagePicker = false
+    @State private  var isShowingScannerSheet = false
+    @State private var text: String = ""
     @State private var inputImage: UIImage?
     
     @State private var checked = false
@@ -182,7 +172,7 @@ struct InnerScanButton: View {
     
     var body: some View {
         Button(action: {
-            self.showingImagePicker = true
+            self.isShowingScannerSheet = true
             self.checked.toggle()
         }) {
             HStack (alignment: .top) {
@@ -204,9 +194,18 @@ struct InnerScanButton: View {
             
         }
         .foregroundColor(.black)
-        .sheet(isPresented: $showingImagePicker) {
-            ImagePicker(image: self.$inputImage)
+        .sheet(isPresented: $isShowingScannerSheet) {
+            self.makeScannerView()
         }
+    }
+    
+    private func makeScannerView() -> ScannerView {
+        ScannerView(completion: { textPerPage in
+            if let text = textPerPage?.joined(separator: "\n").trimmingCharacters(in: .whitespacesAndNewlines) {
+                self.text = text
+            }
+            self.isShowingScannerSheet = false
+        })
     }
 }
 

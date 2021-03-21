@@ -28,6 +28,7 @@
 		79A63E4A2607B33500D08E00 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A63E492607B33500D08E00 /* ImagePicker.swift */; };
 		79A63E4F2607B96B00D08E00 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A63E4E2607B96B00D08E00 /* DropDown.swift */; };
 		79A63E572607BBCC00D08E00 /* PhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A63E562607BBCC00D08E00 /* PhotoLibrary.swift */; };
+		79A63E5C2607DD4B00D08E00 /* ScanDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A63E5B2607DD4B00D08E00 /* ScanDoc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		79A63E492607B33500D08E00 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		79A63E4E2607B96B00D08E00 /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		79A63E562607BBCC00D08E00 /* PhotoLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibrary.swift; sourceTree = "<group>"; };
+		79A63E5B2607DD4B00D08E00 /* ScanDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDoc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				7953F36E2605645B0089A86F /* ChatView.swift */,
 				79A63E4E2607B96B00D08E00 /* DropDown.swift */,
 				79A63E562607BBCC00D08E00 /* PhotoLibrary.swift */,
+				79A63E5B2607DD4B00D08E00 /* ScanDoc.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				79A63E572607BBCC00D08E00 /* PhotoLibrary.swift in Sources */,
 				79A63E4A2607B33500D08E00 /* ImagePicker.swift in Sources */,
 				79639604259BD6A700593863 /* SceneDelegate.swift in Sources */,
+				79A63E5C2607DD4B00D08E00 /* ScanDoc.swift in Sources */,
 				79639606259BD6A700593863 /* HairScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,7 +520,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Sophia-Shovkovy.acesdv";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -537,7 +541,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Sophia-Shovkovy.acesdv";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -8,15 +8,11 @@
 import SwiftUI
 
 struct PhotoLibrary: View {
-    @State var list_of_images: UIImage?
-    
-    
-    @State var images = ["TestImage", "PopularTesting", "NewTesting", "RecommendedTesting"]
     var body: some View {
         VStack (alignment: .center) {
             ScrollView(.vertical, showsIndicators: true) {
-                ForEach(0..<images.count) {
-                    Image(self.images[$0])
+                ForEach(list_of_images, id: \.self) { image in
+                    Image(uiImage: image)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                 }

@@ -98,9 +98,8 @@ struct SafetyDropDowns: View {
     ]
     
     let documentOptions = [
-        DropDownOptions(key: "Scan driver's license", val: ""),
-        DropDownOptions(key: "Scan birth certificate", val: ""),
-        DropDownOptions(key: "Scan social security card", val: ""),
+        DropDownOptions(key: "Scan a document (e.g., drivers license, birth certificate)", val: ""),
+        DropDownOptions(key: "Upload a photo", val: ""),
     ]
     
     var body: some View {

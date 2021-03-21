@@ -25,6 +25,7 @@
 		79639611259BD6A900593863 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7963960F259BD6A900593863 /* LaunchScreen.storyboard */; };
 		7963961C259BD6A900593863 /* acesdvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963961B259BD6A900593863 /* acesdvTests.swift */; };
 		79639627259BD6A900593863 /* acesdvUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639626259BD6A900593863 /* acesdvUITests.swift */; };
+		79DFC20926070C0400661DF6 /* SampleMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFC20826070C0400661DF6 /* SampleMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		79639622259BD6A900593863 /* acesdvUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = acesdvUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79639626259BD6A900593863 /* acesdvUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acesdvUITests.swift; sourceTree = "<group>"; };
 		79639628259BD6A900593863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79DFC20826070C0400661DF6 /* SampleMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				7953F35A2605503B0089A86F /* SafetyPlanView.swift */,
 				7953F3642605615C0089A86F /* MoreInfoView.swift */,
 				7953F36E2605645B0089A86F /* ChatView.swift */,
+				79DFC20826070C0400661DF6 /* SampleMenuView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				7953F36A260564500089A86F /* ChatScreen.swift in Sources */,
 				79639602259BD6A700593863 /* AppDelegate.swift in Sources */,
 				79639609259BD6A700593863 /* acesdv.xcdatamodeld in Sources */,
+				79DFC20926070C0400661DF6 /* SampleMenuView.swift in Sources */,
 				79639604259BD6A700593863 /* SceneDelegate.swift in Sources */,
 				79639606259BD6A700593863 /* HairScreen.swift in Sources */,
 			);

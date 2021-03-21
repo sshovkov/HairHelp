@@ -13,7 +13,6 @@ struct SafetyPlanView: View {
             ZStack {
                 VStack(alignment: .center) {
                     SafetyChatBanner()
-                        .offset(y: -14)
                     SafetyCategories()
                     SafetyDropDowns()
                     Spacer()
@@ -75,83 +74,86 @@ struct SafetyCategories: View {
 
 struct SafetyDropDowns: View {
     var body: some View {
-        VStack {
-            Button(action: {
-                print("pressed")
-            }, label: {
-                HStack {
-                    Text("Physical Safety")
-                        .padding(.trailing, 160)
-                    Image("RightChevron")
-                }
-            })
-            .frame(width: 353, height: 54)
-            .background(Color("LightGray"))
-            .foregroundColor(.black)
-            .cornerRadius(20)
-            .padding(.top, 30)
-            
-            Button(action: {
-                print("pressed")
-            }, label: {
-                HStack {
-                    Text("Emotional Safety")
-                        .padding(.trailing, 155)
-                    Image("RightChevron")
-                }
-            })
-            .frame(width: 353, height: 54)
-            .background(Color("LightGray"))
-            .foregroundColor(.black)
-            .cornerRadius(20)
-            .padding(.top, 30)
-            
-            Button(action: {
-                print("pressed")
-            }, label: {
-                HStack {
-                    Text("Legal Safety")
-                        .padding(.trailing, 185)
-                    Image("RightChevron")
-                }
-            })
-            .frame(width: 353, height: 54)
-            .background(Color("LightGray"))
-            .foregroundColor(.black)
-            .cornerRadius(20)
-            .padding(.top, 30)
-            
-            Button(action: {
-                print("pressed")
-            }, label: {
-                HStack {
-                    Text("Leaving a Relationship")
-                        .padding(.trailing, 115)
-                    Image("RightChevron")
-                }
-            })
-            .frame(width: 353, height: 54)
-            .background(Color("LightGray"))
-            .foregroundColor(.black)
-            .cornerRadius(20)
-            .padding(.top, 30)
-            
-            Button(action: {
-                print("pressed")
-            }, label: {
-                HStack {
-                    Text("My Documents")
-                        .padding(.trailing, 165)
-                    Image("RightChevron")
-                }
-            })
-            .frame(width: 353, height: 54)
-            .background(Color("LightGray"))
-            .foregroundColor(.black)
-            .cornerRadius(20)
-            .padding(.top, 30)
+        ScrollView(.vertical, showsIndicators: true) {
+            VStack {
+                Button(action: {
+                    print("pressed")
+                }, label: {
+                    HStack {
+                        Text("Physical Safety")
+                            .padding(.trailing, 160)
+                        Image("RightChevron")
+                    }
+                })
+                .frame(width: 353, height: 54)
+                .background(Color("LightGray"))
+                .foregroundColor(.black)
+                .cornerRadius(20)
+                .padding(.top, 30)
+                
+                Button(action: {
+                    print("pressed")
+                }, label: {
+                    HStack {
+                        Text("Emotional Safety")
+                            .padding(.trailing, 155)
+                        Image("RightChevron")
+                    }
+                })
+                .frame(width: 353, height: 54)
+                .background(Color("LightGray"))
+                .foregroundColor(.black)
+                .cornerRadius(20)
+                .padding(.top, 30)
+                
+                Button(action: {
+                    print("pressed")
+                }, label: {
+                    HStack {
+                        Text("Legal Safety")
+                            .padding(.trailing, 185)
+                        Image("RightChevron")
+                    }
+                })
+                .frame(width: 353, height: 54)
+                .background(Color("LightGray"))
+                .foregroundColor(.black)
+                .cornerRadius(20)
+                .padding(.top, 30)
+                
+                Button(action: {
+                    print("pressed")
+                }, label: {
+                    HStack {
+                        Text("Leaving a Relationship")
+                            .padding(.trailing, 115)
+                        Image("RightChevron")
+                    }
+                })
+                .frame(width: 353, height: 54)
+                .background(Color("LightGray"))
+                .foregroundColor(.black)
+                .cornerRadius(20)
+                .padding(.top, 30)
+                
+                Button(action: {
+                    print("pressed")
+                }, label: {
+                    HStack {
+                        Text("My Documents")
+                            .padding(.trailing, 165)
+                        Image("RightChevron")
+                    }
+                })
+                .frame(width: 353, height: 54)
+                .background(Color("LightGray"))
+                .foregroundColor(.black)
+                .cornerRadius(20)
+                .padding(.top, 30)
+            }
         }
     }
+        
 }
 
 struct SafetyQuickExit: View {

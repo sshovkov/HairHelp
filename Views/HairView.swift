@@ -21,27 +21,31 @@ struct HairView: View {
     let newImages: [String]
     
     var body: some View {
-        ZStack {
-            VStack(alignment: .leading) {
-                HairViewTitle()
-                
-                HairViewCategoryButtons(selection: $selection, trendingTapped: $trendingTapped, recommendedTapped: $recommendedTapped, popularTapped: $popularTapped, newTapped: $newTapped)
-                
-                HairViewScrollView(selection: $selection, recommendedImages: recommendedImages, trendingImages: trendingImages, popularImages: popularImages, newImages: newImages)
-                
-                Text("Categories")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.leading)
-                    .padding(.top, 40.0)
-                    .offset(x: 20)
-                
-                HairViewIconGroup()
-                
-            }.frame(minWidth: 0, idealWidth: 100, maxWidth: .infinity, minHeight: 0, idealHeight: 100, maxHeight: .infinity, alignment: .topLeading)
+        NavigationView {
+            ZStack {
+                VStack(alignment: .leading) {
+                    HairViewTitle()
+                    
+                    HairViewCategoryButtons(selection: $selection, trendingTapped: $trendingTapped, recommendedTapped: $recommendedTapped, popularTapped: $popularTapped, newTapped: $newTapped)
+                    
+                    HairViewScrollView(selection: $selection, recommendedImages: recommendedImages, trendingImages: trendingImages, popularImages: popularImages, newImages: newImages)
+                    
+                    Text("Categories")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.leading)
+                        .padding(.top, 40.0)
+                        .offset(x: 20)
+                    
+                    HairViewIconGroup()
+                    
+                }.frame(minWidth: 0, idealWidth: 100, maxWidth: .infinity, minHeight: 0, idealHeight: 100, maxHeight: .infinity, alignment: .topLeading)
+                HairViewProfileIcon()
+            }
             
-            HairViewProfileIcon()
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
         
     }
 }
@@ -227,13 +231,17 @@ struct HairIconTemplate: View {
 struct HairViewProfileIcon: View {
     var body: some View {
         HStack{
-            Button(action: {
-                print("pressed")
-            }, label: {
-                Image("person.crop.circle")
-                    .renderingMode(.original)
+            NavigationLink(
+                destination: PasswordScreen()
+                    .navigationBarHidden(true)
+                    .navigationBarBackButtonHidden(true),
+                label: {
+                    Image("person.crop.circle")
+                        .renderingMode(.original)
+                        .navigationBarHidden(true)
+                        
             })
-            .offset(x: -20, y: 5)
+                .offset(x: -20, y: 5)
         }
         .frame(minWidth: 0, idealWidth: 100, maxWidth: .infinity, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .topTrailing)
     }

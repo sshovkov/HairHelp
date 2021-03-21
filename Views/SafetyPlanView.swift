@@ -22,13 +22,18 @@ struct SafetyPlanView: View {
                 }
             }
         }
-        
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 struct SafetyChatBanner: View {
+    @State private var showChat = false
     var body: some View {
-        Button(action: {print("pressed")}, label: {
+        
+        Button(action: {
+                showChat = true
+        }, label: {
             VStack {
                 Text("GET HELP NOW")
                     .font(.title3)
@@ -41,7 +46,9 @@ struct SafetyChatBanner: View {
         .frame(width: 415, height: 85)
         .background(Color("Lavender").opacity(0.35))
         .foregroundColor(Color("DarkPurple"))
-        
+        .sheet(isPresented: $showChat) {
+            ChatScreen()
+        }
     }
 }
 
@@ -55,17 +62,15 @@ struct SafetyCategories: View {
                 destination: MoreInfoScreen(),
                 label: {
                     Image("QuestionIcon")
+                        .renderingMode(.original)
                         .frame(width:38, height: 38)
                         .padding(.horizontal, 10)
-                        .navigationBarHidden(true)
                 })
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
         }
         .padding(.top, 30)
     }
-    
-//    Image("QuestionIcon")
-//        .frame(width:38, height: 38)
-//        .padding(.horizontal, 10)
 }
 
 struct SafetyDropDowns: View {
@@ -150,10 +155,18 @@ struct SafetyDropDowns: View {
 }
 
 struct SafetyQuickExit: View {
+    @State private var showHairView = false
     var body: some View {
         VStack {
+            NavigationLink(
+                destination: HairScreen(),
+                isActive: $showHairView,
+                label: {
+                    EmptyView()
+                })
+            
             Button(action: {
-                
+                showHairView = true
             }, label: {
                 Text("SAFETY ALART")
             })
@@ -163,7 +176,7 @@ struct SafetyQuickExit: View {
             .cornerRadius(20, corners: [.topLeft, .topRight])
             
             Button(action: {
-                print("pressed")
+                showHairView = true
             }, label: {
                 Text("TO LEAVE THIS SCREEN QUICKLY,\nCLICK HERE")
                     .font(.title2)

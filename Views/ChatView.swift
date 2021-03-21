@@ -12,15 +12,14 @@ struct ChatView: View {
         ZStack {
             VStack {
                 ChatTitle()
-                    .offset(y: 10)
+                    .offset(y: 30)
                 ChatBackground()
-                    .offset(y: 10)
+                    .offset(y: 30)
                 ChatSendMessage()
+                    .offset(y: 10)
             }
             ChatCover()
         }
-        
-        
     }
 }
 
@@ -36,16 +35,19 @@ struct ChatBackground: View {
 }
 
 struct ChatCover: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(Color.black.opacity(0.4))
-                .frame(width: 415, height:950)
-            Text("Currently Out\nof Scope")
-                .font(.largeTitle)
-                .multilineTextAlignment(.center)
-        }
-        
+            Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Text("Currently Out\nof Scope")
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color.black)
+            })
+            .frame(width: 415, height: 950, alignment: .center)
+            .background(Color.black.opacity(0.4))
     }
 }
 
@@ -84,9 +86,10 @@ struct ChatTitle: View {
                         .frame(width: 6, height: 6)
                 }
             }
-            .offset(x:45)
+            .offset(x:30)
             Image("ExitChatIcon")
-                .offset(x: 90, y: -10)
+                .frame(width: 40, height: 40)
+                .offset(x: 100)
         }
     }
 }

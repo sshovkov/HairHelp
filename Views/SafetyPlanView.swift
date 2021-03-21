@@ -73,92 +73,55 @@ struct SafetyCategories: View {
 }
 
 struct SafetyDropDowns: View {
+    let physicalSafetyOptions = [
+        DropDownOptions(key: "Identify your partner's use and level of force", val: ""),
+        DropDownOptions(key: "Know where the nearest public phone is located", val: ""),
+        DropDownOptions(key: "Identify safe areas in your residence", val: "Places with pathways to exits and away from weapons, try to move to those areas before arguments escalate."),
+    ]
+    
+    let emotionalSafetyOptions = [
+        DropDownOptions(key: "Identify and work towards achievable goals", val: ""),
+        DropDownOptions(key: "Create a support system", val: ""),
+        DropDownOptions(key: "Create peaceful space for yourself", val: ""),
+    ]
+    
+    let legalSafetyOptions = [
+        DropDownOptions(key: "Identify non-law enforcement service providers near you", val: ""),
+        DropDownOptions(key: "Determine if it's safe for you to call 911 during an emergency", val: ""),
+        DropDownOptions(key: "Determine if protective orders are right for you and your situation", val: ""),
+    ]
+    
+    let relationshipOptions = [
+        DropDownOptions(key: "Set aside money", val: ""),
+        DropDownOptions(key: "Establish where you can go to get help", val: ""),
+        DropDownOptions(key: "Record evidence of physical abuse", val: "Take pictures of injuries or keep a journal of violent events"),
+    ]
+    
+    let documentOptions = [
+        DropDownOptions(key: "Scan driver's license", val: ""),
+        DropDownOptions(key: "Scan birth certificate", val: ""),
+        DropDownOptions(key: "Scan social security card", val: ""),
+    ]
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
-            VStack {
-                Button(action: {
-                    print("pressed")
-                }, label: {
-                    HStack {
-                        Text("Physical Safety")
-                            .padding(.trailing, 160)
-                        Image("RightChevron")
-                    }
-                })
-                .frame(width: 353, height: 54)
-                .background(Color("LightGray"))
-                .foregroundColor(.black)
-                .cornerRadius(20)
-                .padding(.top, 30)
-                
-                Button(action: {
-                    print("pressed")
-                }, label: {
-                    HStack {
-                        Text("Emotional Safety")
-                            .padding(.trailing, 155)
-                        Image("RightChevron")
-                    }
-                })
-                .frame(width: 353, height: 54)
-                .background(Color("LightGray"))
-                .foregroundColor(.black)
-                .cornerRadius(20)
-                .padding(.top, 30)
-                
-                Button(action: {
-                    print("pressed")
-                }, label: {
-                    HStack {
-                        Text("Legal Safety")
-                            .padding(.trailing, 185)
-                        Image("RightChevron")
-                    }
-                })
-                .frame(width: 353, height: 54)
-                .background(Color("LightGray"))
-                .foregroundColor(.black)
-                .cornerRadius(20)
-                .padding(.top, 30)
-                
-                Button(action: {
-                    print("pressed")
-                }, label: {
-                    HStack {
-                        Text("Leaving a Relationship")
-                            .padding(.trailing, 115)
-                        Image("RightChevron")
-                    }
-                })
-                .frame(width: 353, height: 54)
-                .background(Color("LightGray"))
-                .foregroundColor(.black)
-                .cornerRadius(20)
-                .padding(.top, 30)
-                
-                Button(action: {
-                    print("pressed")
-                }, label: {
-                    HStack {
-                        Text("My Documents")
-                            .padding(.trailing, 165)
-                        Image("RightChevron")
-                    }
-                })
-                .frame(width: 353, height: 54)
-                .background(Color("LightGray"))
-                .foregroundColor(.black)
-                .cornerRadius(20)
-                .padding(.top, 30)
+            VStack(spacing: 15) {
+                DropDown(name: "Physical Safety", options: physicalSafetyOptions)
+                DropDown(name: "Emotional Safety", options: emotionalSafetyOptions)
+                DropDown(name: "Legal Safety", options: legalSafetyOptions)
+                DropDown(name: "Leaving a Relationship", options: relationshipOptions)
+                DropDown(name: "My Documents", options: documentOptions)
             }
-        }
+        }.padding(.top, 35)
     }
         
 }
 
 struct SafetyQuickExit: View {
     @State private var showHairView = false
+    
     var body: some View {
+        
         VStack {
             NavigationLink(
                 destination: HairScreen(),
@@ -184,7 +147,7 @@ struct SafetyQuickExit: View {
                     .font(.title2)
                     .multilineTextAlignment(.center)
             })
-            .frame(width: 414, height: 112)
+            .frame(width: 414, height: 120)
             .background(Color("Lavender").opacity(0.35))
             .foregroundColor(Color("DarkPurple"))
         }
@@ -205,6 +168,11 @@ struct RoundedCorner: Shape {
             let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
             return Path(path.cgPath)
         }
+}
+
+struct DropDownOptions {
+    let key: String
+    let val: String
 }
 
 struct SafetyPlanView_Preview: PreviewProvider {

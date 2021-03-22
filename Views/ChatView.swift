@@ -52,17 +52,18 @@ struct ChatCover: View {
 }
 
 struct ChatSendMessage: View {
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         HStack {
             Text("Type your message here...")
-                .foregroundColor(Color.black.opacity(0.5))
+                .foregroundColor(colorScheme == .dark ? Color.white.opacity(0.7) : Color.black.opacity(0.5))
                 .padding(.trailing, 30)
-            Image("LocationIcon")
+            Image(colorScheme == .dark ? "LocationIcon_dark" : "LocationIcon")
                 .frame(width: 29, height: 26)
-            Image("AttachIcon")
+            Image(colorScheme == .dark ? "AttachIcon_dark" : "AttachIcon")
                 .frame(width: 15, height: 30)
                 .padding(.trailing, 10)
-            Image("SendIcon")
+            Image(colorScheme == .dark ? "SendIcon_dark" : "SendIcon")
                 .frame(width: 20, height: 26)
                 .padding(.leading, 13)
         }

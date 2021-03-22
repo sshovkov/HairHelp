@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		790E920C26051F1A005A1341 /* HairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E920B26051F1A005A1341 /* HairView.swift */; };
 		7953F34C260531800089A86F /* PasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F34B260531800089A86F /* PasswordScreen.swift */; };
-		7953F351260531920089A86F /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F350260531920089A86F /* PasswordView.swift */; };
 		7953F3562605502E0089A86F /* SafetyPlanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F3552605502E0089A86F /* SafetyPlanScreen.swift */; };
 		7953F35B2605503B0089A86F /* SafetyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F35A2605503B0089A86F /* SafetyPlanView.swift */; };
 		7953F360260561300089A86F /* MoreInfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953F35F260561300089A86F /* MoreInfoScreen.swift */; };
@@ -29,7 +28,7 @@
 		79A63E4F2607B96B00D08E00 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A63E4E2607B96B00D08E00 /* DropDown.swift */; };
 		79A63E572607BBCC00D08E00 /* PhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A63E562607BBCC00D08E00 /* PhotoLibrary.swift */; };
 		79A63E5C2607DD4B00D08E00 /* ScanDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A63E5B2607DD4B00D08E00 /* ScanDoc.swift */; };
-		79A63E642607EB3300D08E00 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A63E632607EB3300D08E00 /* Password.swift */; };
+		79A63E642607EB3300D08E00 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A63E632607EB3300D08E00 /* PasswordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 /* Begin PBXFileReference section */
 		790E920B26051F1A005A1341 /* HairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairView.swift; sourceTree = "<group>"; };
 		7953F34B260531800089A86F /* PasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordScreen.swift; sourceTree = "<group>"; };
-		7953F350260531920089A86F /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		7953F3552605502E0089A86F /* SafetyPlanScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyPlanScreen.swift; sourceTree = "<group>"; };
 		7953F35A2605503B0089A86F /* SafetyPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyPlanView.swift; sourceTree = "<group>"; };
 		7953F35F260561300089A86F /* MoreInfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoScreen.swift; sourceTree = "<group>"; };
@@ -78,7 +76,7 @@
 		79A63E4E2607B96B00D08E00 /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		79A63E562607BBCC00D08E00 /* PhotoLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibrary.swift; sourceTree = "<group>"; };
 		79A63E5B2607DD4B00D08E00 /* ScanDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDoc.swift; sourceTree = "<group>"; };
-		79A63E632607EB3300D08E00 /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
+		79A63E632607EB3300D08E00 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				790E920B26051F1A005A1341 /* HairView.swift */,
-				7953F350260531920089A86F /* PasswordView.swift */,
 				7953F35A2605503B0089A86F /* SafetyPlanView.swift */,
 				79A63E492607B33500D08E00 /* ImagePicker.swift */,
 				7953F3642605615C0089A86F /* MoreInfoView.swift */,
@@ -130,7 +127,7 @@
 				79A63E4E2607B96B00D08E00 /* DropDown.swift */,
 				79A63E562607BBCC00D08E00 /* PhotoLibrary.swift */,
 				79A63E5B2607DD4B00D08E00 /* ScanDoc.swift */,
-				79A63E632607EB3300D08E00 /* Password.swift */,
+				79A63E632607EB3300D08E00 /* PasswordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,13 +324,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79A63E642607EB3300D08E00 /* Password.swift in Sources */,
+				79A63E642607EB3300D08E00 /* PasswordView.swift in Sources */,
 				7953F360260561300089A86F /* MoreInfoScreen.swift in Sources */,
 				7953F3652605615C0089A86F /* MoreInfoView.swift in Sources */,
 				7953F3562605502E0089A86F /* SafetyPlanScreen.swift in Sources */,
 				7953F34C260531800089A86F /* PasswordScreen.swift in Sources */,
 				7953F35B2605503B0089A86F /* SafetyPlanView.swift in Sources */,
-				7953F351260531920089A86F /* PasswordView.swift in Sources */,
 				79A63E4F2607B96B00D08E00 /* DropDown.swift in Sources */,
 				7953F36F2605645B0089A86F /* ChatView.swift in Sources */,
 				790E920C26051F1A005A1341 /* HairView.swift in Sources */,

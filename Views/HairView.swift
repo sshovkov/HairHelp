@@ -80,6 +80,7 @@ struct HairViewTitle: View {
 }
 
 struct HairViewCategoryButtons: View {
+    @Environment(\.colorScheme) var colorScheme
     @Binding var selection: String
     @Binding var trendingTapped: Bool
     @Binding var recommendedTapped: Bool
@@ -97,6 +98,7 @@ struct HairViewCategoryButtons: View {
             },
                    label: {
                 Text("Trending")
+                    .foregroundColor(colorScheme == .dark ? .white : .black)
                     .fontWeight(trendingTapped ? .bold : .regular)
             })
             
@@ -109,6 +111,7 @@ struct HairViewCategoryButtons: View {
             },
                    label: {
                 Text("Recommended")
+                    .foregroundColor(colorScheme == .dark ? .white : .black)
                     .fontWeight(recommendedTapped ? .bold : .regular)
             })
             
@@ -121,6 +124,7 @@ struct HairViewCategoryButtons: View {
             },
                    label: {
                 Text("Popular")
+                    .foregroundColor(colorScheme == .dark ? .white : .black)
                     .fontWeight(popularTapped ? .bold : .regular)
             })
             
@@ -133,6 +137,7 @@ struct HairViewCategoryButtons: View {
             },
                    label: {
                 Text("New")
+                    .foregroundColor(colorScheme == .dark ? .white : .black)
                     .fontWeight(newTapped ? .bold : .regular)
             })
         }

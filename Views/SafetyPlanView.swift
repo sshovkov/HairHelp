@@ -27,6 +27,7 @@ struct SafetyPlanView: View {
 }
 
 struct SafetyChatBanner: View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var showChat = false
     var body: some View {
         
@@ -43,7 +44,7 @@ struct SafetyChatBanner: View {
             }
         })
         .frame(width: 415, height: 85)
-        .background(Color("Lavender").opacity(0.35))
+        .background(colorScheme == .dark ? Color("Lavender") : Color("Lavender").opacity(0.35))
         .foregroundColor(Color("DarkPurple"))
         .sheet(isPresented: $showChat) {
             ChatScreen()
@@ -52,6 +53,7 @@ struct SafetyChatBanner: View {
 }
 
 struct SafetyCategories: View {
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         HStack {
             Text("My Safety Plan")
@@ -60,7 +62,7 @@ struct SafetyCategories: View {
             NavigationLink(
                 destination: MoreInfoScreen(),
                 label: {
-                    Image("QuestionIcon")
+                    Image(colorScheme == .dark ? "QuestionIcon_dark" : "QuestionIcon")
                         .renderingMode(.original)
                         .frame(width:38, height: 38)
                         .padding(.horizontal, 10)
@@ -70,7 +72,7 @@ struct SafetyCategories: View {
             NavigationLink(
                 destination: PhotoLibrary(),
                 label: {
-                    Image("PhotoLibrary")
+                    Image(colorScheme == .dark ? "PhotoLibrary_dark" : "PhotoLibrary")
                         .renderingMode(.original)
                         .frame(width:38, height: 38)
                         .padding(.horizontal, 10)
@@ -127,6 +129,7 @@ struct SafetyDropDowns: View {
 }
 
 struct SafetyQuickExit: View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var showHairView = false
     
     var body: some View {
@@ -157,7 +160,7 @@ struct SafetyQuickExit: View {
                     .multilineTextAlignment(.center)
             })
             .frame(width: 414, height: 120)
-            .background(Color("Lavender").opacity(0.35))
+            .background(colorScheme == .dark ? Color("Lavender") : Color("Lavender").opacity(0.35))
             .foregroundColor(Color("DarkPurple"))
         }
     }

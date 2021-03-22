@@ -59,6 +59,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>This app uses the Camera to allow you to scan documents</string>
+	<string>This app uses the Camera to allow you to take pictures and to scan documents.</string>
 </dict>
 </plist>

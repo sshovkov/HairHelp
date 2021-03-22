@@ -24,7 +24,8 @@
 		79639611259BD6A900593863 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7963960F259BD6A900593863 /* LaunchScreen.storyboard */; };
 		7963961C259BD6A900593863 /* acesdvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963961B259BD6A900593863 /* acesdvTests.swift */; };
 		79639627259BD6A900593863 /* acesdvUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639626259BD6A900593863 /* acesdvUITests.swift */; };
-		79A63E4A2607B33500D08E00 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A63E492607B33500D08E00 /* ImagePicker.swift */; };
+		7984929226083E37004D529A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7984929126083E37004D529A /* ImagePicker.swift */; };
+		7984929726083E4F004D529A /* SUImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7984929626083E4F004D529A /* SUImagePickerView.swift */; };
 		79A63E4F2607B96B00D08E00 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A63E4E2607B96B00D08E00 /* DropDown.swift */; };
 		79A63E572607BBCC00D08E00 /* PhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A63E562607BBCC00D08E00 /* PhotoLibrary.swift */; };
 		79A63E5C2607DD4B00D08E00 /* ScanDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A63E5B2607DD4B00D08E00 /* ScanDoc.swift */; };
@@ -72,7 +73,8 @@
 		79639622259BD6A900593863 /* acesdvUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = acesdvUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79639626259BD6A900593863 /* acesdvUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acesdvUITests.swift; sourceTree = "<group>"; };
 		79639628259BD6A900593863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79A63E492607B33500D08E00 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		7984929126083E37004D529A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		7984929626083E4F004D529A /* SUImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUImagePickerView.swift; sourceTree = "<group>"; };
 		79A63E4E2607B96B00D08E00 /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		79A63E562607BBCC00D08E00 /* PhotoLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibrary.swift; sourceTree = "<group>"; };
 		79A63E5B2607DD4B00D08E00 /* ScanDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDoc.swift; sourceTree = "<group>"; };
@@ -121,13 +123,14 @@
 			children = (
 				790E920B26051F1A005A1341 /* HairView.swift */,
 				7953F35A2605503B0089A86F /* SafetyPlanView.swift */,
-				79A63E492607B33500D08E00 /* ImagePicker.swift */,
 				7953F3642605615C0089A86F /* MoreInfoView.swift */,
 				7953F36E2605645B0089A86F /* ChatView.swift */,
 				79A63E4E2607B96B00D08E00 /* DropDown.swift */,
 				79A63E562607BBCC00D08E00 /* PhotoLibrary.swift */,
 				79A63E5B2607DD4B00D08E00 /* ScanDoc.swift */,
 				79A63E632607EB3300D08E00 /* PasswordView.swift */,
+				7984929126083E37004D529A /* ImagePicker.swift */,
+				7984929626083E4F004D529A /* SUImagePickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				79A63E642607EB3300D08E00 /* PasswordView.swift in Sources */,
 				7953F360260561300089A86F /* MoreInfoScreen.swift in Sources */,
 				7953F3652605615C0089A86F /* MoreInfoView.swift in Sources */,
+				7984929226083E37004D529A /* ImagePicker.swift in Sources */,
 				7953F3562605502E0089A86F /* SafetyPlanScreen.swift in Sources */,
 				7953F34C260531800089A86F /* PasswordScreen.swift in Sources */,
 				7953F35B2605503B0089A86F /* SafetyPlanView.swift in Sources */,
@@ -337,7 +341,7 @@
 				79639602259BD6A700593863 /* AppDelegate.swift in Sources */,
 				79639609259BD6A700593863 /* acesdv.xcdatamodeld in Sources */,
 				79A63E572607BBCC00D08E00 /* PhotoLibrary.swift in Sources */,
-				79A63E4A2607B33500D08E00 /* ImagePicker.swift in Sources */,
+				7984929726083E4F004D529A /* SUImagePickerView.swift in Sources */,
 				79639604259BD6A700593863 /* SceneDelegate.swift in Sources */,
 				79A63E5C2607DD4B00D08E00 /* ScanDoc.swift in Sources */,
 				79639606259BD6A700593863 /* HairScreen.swift in Sources */,

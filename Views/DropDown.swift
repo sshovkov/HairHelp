@@ -119,15 +119,19 @@ struct InnerButton: View {
 struct InnerPhotoButton: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var image: Image?
-    @State private  var showingImagePicker = false
+//    @State private  var showingImagePicker = false
     @State private var inputImage: UIImage?
+    @State private var shouldPresentImagePicker = false
+    @State private var shouldPresentActionScheet = false
+    @State private var shouldPresentCamera = false
     
     @State private var checked = false
     let subtext = "This section can be used to securely store photographic evidence of violent behavior or injuries."
     
     var body: some View {
         Button(action: {
-            self.showingImagePicker = true
+//            self.showingImagePicker = true
+            self.shouldPresentActionScheet = true
             self.checked.toggle()
         }) {
             HStack (alignment: .top) {
@@ -153,9 +157,16 @@ struct InnerPhotoButton: View {
             
         }
         .foregroundColor(.black)
-        .sheet(isPresented: $showingImagePicker,
-               onDismiss: loadImage) {
-            ImagePicker(image: self.$inputImage)
+        .fullScreenCover(isPresented: $shouldPresentImagePicker, onDismiss: loadImage) {
+            SUImagePickerView(sourceType: self.shouldPresentCamera ? .camera : .photoLibrary, image: self.$inputImage, isPresented: self.$shouldPresentImagePicker)
+        }.actionSheet(isPresented: $shouldPresentActionScheet) { () -> ActionSheet in
+            ActionSheet(title: Text("Choose mode"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
+                self.shouldPresentImagePicker = true
+                self.shouldPresentCamera = true
+            }), ActionSheet.Button.default(Text("Photo Library"), action: {
+                self.shouldPresentImagePicker = true
+                self.shouldPresentCamera = false
+            }), ActionSheet.Button.cancel()])
         }
     }
     

@@ -57,12 +57,13 @@ struct CardView: View {
         ZStack{
             Rectangle()
                 .fill(LinearGradient(gradient: Gradient(colors: [Color("Lavender"),Color("Mauve")]), startPoint: .leading, endPoint: .trailing))
-                .frame(width: 230, height:250, alignment: .center)
-                .cornerRadius(20)
-            VStack(){
-                Image("\(imageName)").resizable().frame(width: 230, height: 250, alignment: .top).cornerRadius(20)
-            }
+            
+            Image("\(imageName)")
+                .resizable()
+                .scaledToFill()
         }
+        .frame(width: 230, height:250, alignment: .center)
+        .cornerRadius(20)
     }
 }
 
@@ -221,6 +222,7 @@ struct HairViewIconGroup: View {
 }
 
 struct HairIconTemplate: View {
+    @State private var showingAlert = false
     let name: String
     var body: some View {
         VStack {
@@ -233,6 +235,12 @@ struct HairIconTemplate: View {
                     .frame(width: 35, height: 35)
                     .colorInvert()
             }
+            .onTapGesture {
+                showingAlert = true
+            }
+            .alert(isPresented: $showingAlert, content: {
+                Alert(title: Text("Out of Scope"), message: Text("This feature is currently unavailable."), dismissButton: .default(Text("Ok")))
+            })
             Text(name)
                 .opacity(0.5)
         }
@@ -260,6 +268,6 @@ struct HairViewProfileIcon: View {
 
 struct HairView_Preview: PreviewProvider {
     static var previews: some View {
-        HairView(recommendedImages: ["RecommendedTesting", "RecommendedTesting", "RecommendedTesting", "RecommendedTesting", "RecommendedTesting"], trendingImages: ["NoImage", "NoImage", "NoImage", "NoImage"], popularImages: ["PopularTesting", "PopularTesting", "PopularTesting"], newImages: ["NewTesting", "NewTesting", "NewTesting", "NewTesting"])
+        HairView(recommendedImages: ["RecommendedTesting", "RecommendedTesting", "RecommendedTesting", "RecommendedTesting", "RecommendedTesting"], trendingImages: ["TestImage", "NoImage", "NoImage", "NoImage"], popularImages: ["PopularTesting", "PopularTesting", "PopularTesting"], newImages: ["NewTesting", "NewTesting", "NewTesting", "NewTesting"])
     }
 }

@@ -224,9 +224,15 @@ struct HairIconTemplate: View {
     let name: String
     var body: some View {
         VStack {
-            Circle()
-                .fill(Color("Lavender"))
-                .frame(width: 70, height: 70)
+            ZStack {
+                Circle()
+                    .fill(Color("Lavender"))
+                    .frame(width: 70, height: 70)
+                Image(name)
+                    .resizable()
+                    .frame(width: 35, height: 35)
+                    .colorInvert()
+            }
             Text(name)
                 .opacity(0.5)
         }
@@ -252,8 +258,8 @@ struct HairViewProfileIcon: View {
     }
 }
 
-//struct HairView_Preview: PreviewProvider {
-//    static var previews: some View {
-//        HairView()
-//    }
-//}
+struct HairView_Preview: PreviewProvider {
+    static var previews: some View {
+        HairView(recommendedImages: ["RecommendedTesting", "RecommendedTesting", "RecommendedTesting", "RecommendedTesting", "RecommendedTesting"], trendingImages: ["NoImage", "NoImage", "NoImage", "NoImage"], popularImages: ["PopularTesting", "PopularTesting", "PopularTesting"], newImages: ["NewTesting", "NewTesting", "NewTesting", "NewTesting"])
+    }
+}

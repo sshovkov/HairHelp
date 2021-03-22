@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "hairdresser-preparing-to-cut-customers-long-hair-in-salon-579980845-57bca9495f9b58cdfdacb68f.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

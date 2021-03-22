@@ -268,6 +268,6 @@ struct HairViewProfileIcon: View {
 
 struct HairView_Preview: PreviewProvider {
     static var previews: some View {
-        HairView(recommendedImages: ["RecommendedTesting", "RecommendedTesting", "RecommendedTesting", "RecommendedTesting", "RecommendedTesting"], trendingImages: ["TestImage", "NoImage", "NoImage", "NoImage"], popularImages: ["PopularTesting", "PopularTesting", "PopularTesting"], newImages: ["NewTesting", "NewTesting", "NewTesting", "NewTesting"])
+        HairView(recommendedImages: ["Recommended1", "Recommended2", "Recommended3", "Recommended4", "Recommended5"], trendingImages: ["Trending1", "Trending2", "Trending3", "Trending4"], popularImages: ["Popular1", "Popular2", "Popular3", "Popular4"], newImages: ["New1", "New2", "New3"])
     }
 }

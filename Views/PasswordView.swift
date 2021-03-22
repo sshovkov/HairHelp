@@ -129,12 +129,6 @@ struct PasswordView: View {
                             Alert(title: Text("Out of Scope"), message: Text("This feature is currently unavailable."), dismissButton: .default(Text("Ok")))
                         })
                         
-//                        Text("Emergency")
-//                            .foregroundColor(.black)
-//                            .padding(.trailing, 50)
-//                            .opacity(0.5)
-//                            .font(.title2)
-                        
                         if input.count == 0 {
                             Button(action: {
                                 showHairView = true
